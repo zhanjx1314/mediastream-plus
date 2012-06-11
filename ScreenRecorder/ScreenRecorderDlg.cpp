@@ -77,6 +77,7 @@ void CScreenRecorderDlg::DoDataExchange(CDataExchange* pDX)
 	CDialog::DoDataExchange(pDX);
 	DDX_Control(pDX, IDC_EDIT_FILE_NAME, mFileName);
 	DDX_Control(pDX, IDC_EDIT_PRE_VIEW, mWndPreView);
+	DDX_Control(pDX, IDC_BUTTON_CAPTURE, mRecBtn);
 }
 
 BEGIN_MESSAGE_MAP(CScreenRecorderDlg, CDialog)
@@ -230,8 +231,11 @@ void CScreenRecorderDlg::OnBnClickedButtonCapture()
 		}
 
 		video_mail_record_start_recording(os,TRUE);
+
+		mRecBtn.SetWindowText("停止录制");
 	}else{
 		video_mail_record_stop(os);
 		os =NULL;
+		mRecBtn.SetWindowText("开始录制");
 	}	
 }
