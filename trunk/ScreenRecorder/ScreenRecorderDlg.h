@@ -34,4 +34,5 @@ public:
 	CEdit mFileName;
 	afx_msg void OnBnClickedButtonCapture();
 	CEdit mWndPreView;
+	CButton mRecBtn;
 };
