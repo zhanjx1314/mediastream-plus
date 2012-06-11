@@ -185,16 +185,16 @@ void CVideoPlayerDemoDlg::OnBnClickedButtonOpenFile()
 
 		if(video_in_stream){
 			file_stream_init(video_in_stream);
+
 		}
 		video_player =  video_player_new(); /*创建player*/
 
 		if(video_player){
 			video_player_set_rate(video_player,16000); //设置音频输出采样率
 			video_player_set_nchannels(video_player,2); //设置输出声道
+			video_player_set_video_size(video_player,file_stream_video_get_vsize(video_in_stream));
 		}
 
-
-		video_player_set_video_size(video_player,file_stream_video_get_vsize(video_in_stream));
 		video_player_set_fps(video_player,file_stream_video_get_fps(video_in_stream));
 
 		video_player_start(video_player,

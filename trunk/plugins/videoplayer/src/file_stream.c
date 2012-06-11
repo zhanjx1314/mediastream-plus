@@ -960,8 +960,8 @@ int file_stream_init(VideoState *is){
 	is->rate = 32000;
 	is->nchannels = 2;
 	is->fps = 15.00;
-	is->vsize.width = MS_VIDEO_SIZE_CIF_W;
-	is->vsize.height = MS_VIDEO_SIZE_CIF_H;
+	is->vsize.width = MS_VIDEO_SIZE_VGA_W;
+	is->vsize.height = MS_VIDEO_SIZE_VGA_H;
 	is->audio_decoder_thread = NULL;
 	is->packet_read_thread = NULL;
 	is->audio_decoder_thread = NULL;
