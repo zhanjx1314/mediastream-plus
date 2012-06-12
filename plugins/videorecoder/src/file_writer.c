@@ -951,35 +951,11 @@ static int file_write_frame(VideoRecoder *os)
 {
 	int ret = -1;
 	int ret2= -1;
-/*	AVStream *audio_st = os->audio_st;
-	AVStream *video_st = os->video_st;
-	double audio_pts = os->audio_pts;
-	double video_pts = os->video_pts;
-	
-
-	// compute current audio and video time 
-	if (audio_st)
-		audio_pts = (double)audio_st->pts.val * audio_st->time_base.num / audio_st->time_base.den;
-	else
-		audio_pts = 0.0;
-
-	if (video_st)
-		video_pts = (double)video_st->pts.val * video_st->time_base.num / video_st->time_base.den;
-	else
-		video_pts = 0.0;
-*/
-	
-	/* write interleaved audio and video frames */
-	//if (!video_st || (video_st && audio_st && audio_pts < video_pts)) {
-	//	ret =  write_audio_frame(os);
-	//} else {	
-	//	ret =  write_video_frame(os);
-	//}
 
 	ret =  write_video_frame(os);
 	ret2 =  write_audio_frame(os);
 
-	return (ret==0 &  ret2==0)? 0 : -1;
+	return (ret==0 && ret2==0)? 0 : -1;
 }
 
 static mblk_t *mono2stereo(mblk_t *im)
