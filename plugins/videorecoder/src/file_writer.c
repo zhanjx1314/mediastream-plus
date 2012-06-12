@@ -1007,10 +1007,10 @@ static void av_read_buffer(VideoRecoder *os){
 		/*BUG 20111121 待解决,CallRecord 采样率不一致*/
 		//单声道转2声道;
 		//	int buffer_size = (采样率 * 2字节 *声道数)/1000 * 毫秒长度;
-		//if(os->nchannels==1)
+		if(os->nchannels==1)
 			ms_bufferizer_put(os->bufferizer,mono2stereo(aim));
-		//else
-		//	ms_bufferizer_put(os->bufferizer,aim);
+		else
+			ms_bufferizer_put(os->bufferizer,aim);
 		ms_mutex_lock(&os->audio_inq.lock);
 	}
 	ms_mutex_unlock(&os->audio_inq.lock);
