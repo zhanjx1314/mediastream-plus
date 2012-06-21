@@ -443,11 +443,11 @@
 			/>
 			<Tool
 				Name="VCCLCompilerTool"
-				Optimization="3"
-				InlineFunctionExpansion="1"
-				EnableIntrinsicFunctions="true"
-				FavorSizeOrSpeed="2"
-				OmitFramePointers="true"
+				Optimization="0"
+				InlineFunctionExpansion="0"
+				EnableIntrinsicFunctions="false"
+				FavorSizeOrSpeed="0"
+				OmitFramePointers="false"
 				AdditionalIncludeDirectories="..\..\linphone\oRTP\include;..\..\linphone\mediastreamer2\include;..\..\osip\include;..\..\eXosip\include;..\..\linphone\coreapi;.;..\..\3rdparty\udt4\src\;..\..\3rdparty\udt4\app\;..\..\plugins\videoplayer\src\;..\..\plugins\msudt4\src;&quot;..\..\codecs\ffmpeg-i386&quot;;..\..\build\mediastreamer2;..\..\plugins\videorecoder\src"
 				PreprocessorDefinitions="WIN32;_NDEBUG;_WINDOWS;_USRDLL;LIBLINPHONE_EXPORTS;IN_LINPHONE;OSIP_MT;ENABLE_TRACE;LOG_DOMAIN=\&quot;QfishPhoneCore\&quot;;LIBSIPUA3_NAME=\&quot;LivecomVideo\&quot;;LINPHONE_VERSION=\&quot;3.0\&quot;;LINPHONE_PLUGINS_DIR=\&quot;plugins\&quot;;VIDEO_ENABLED;NB_MAX_CALLS=16;ENABLE_UDT;ORTP_STATIC;UDT_STATIC;ENABLED_MCU_MEDIA_SERVER"
 				RuntimeLibrary="0"
@@ -455,7 +455,7 @@
 				ProgramDataBaseFileName="$(OutDir)/$(ProjectName).pdb"
 				WarningLevel="0"
 				Detect64BitPortabilityProblems="true"
-				DebugInformationFormat="3"
+				DebugInformationFormat="4"
 			/>
 			<Tool
 				Name="VCManagedResourceCompilerTool"
